@@ -76,7 +76,6 @@ nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:
 .links a{text-decoration:none;color:#b9bbc2}
 .links a:hover{color:#fff}
 nav .btn{padding:9px 14px;font-size:.72rem}
-@media (max-width:900px){.links{display:none}}
 @media (max-width:640px){header.hero img{object-position:52% 50%}.num58{top:70px;font-size:8rem}}
 
 /* hero */
@@ -286,6 +285,64 @@ footer .soc a:hover{color:var(--red-hi)}
   @keyframes slide{from{transform:translateX(60px);opacity:0}to{transform:none;opacity:1}}
   @keyframes rise{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
 }
+
+/* ===== pacote C do QA (26/10/2026): design ===== */
+:root{--sec:clamp(56px,8vw,88px)}
+.race,.story,.results,.partners,.press{padding-block:var(--sec)}
+.lang button{padding:6px 10px}
+/* menu: no telemóvel passa a uma linha que se arrasta para o lado */
+@media (max-width:900px){
+  nav.top .wrap{flex-wrap:wrap;row-gap:0}
+  .links{order:3;width:100%;overflow-x:auto;gap:20px;padding:0 0 10px;white-space:nowrap;scrollbar-width:none}
+  .links::-webkit-scrollbar{display:none}
+  .links a{padding-block:6px}
+  html{scroll-padding-top:112px}
+  section,header{scroll-margin-top:104px}
+}
+/* primeiro ecrã: o título de campeão em destaque e a faixa vermelha a espreitar */
+.hero{min-height:min(calc(100svh - 160px),860px)}
+.hero .sub.title-line{flex-wrap:nowrap;align-items:flex-start}
+.hero .sub.title-line .flag{flex:none;margin-top:.35em}
+.hero .sub.title-line>span:last-child{font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,2.4vw,1.9rem);letter-spacing:.03em;line-height:1.05;color:#fff}
+.intro .hint{display:grid;gap:8px;font-size:.8rem;color:#d5d6da}
+.intro .hint small{font-size:.66rem;color:#8d9099}
+.num58{right:max(20px,calc((100vw - 1200px)/2 + 20px));-webkit-text-stroke-color:rgba(255,255,255,.55)}
+@media (min-width:1600px){.hero img{object-position:50% 58%}}
+@media (max-width:900px){.hero::before{background:linear-gradient(180deg,rgba(13,14,17,.25) 0%,rgba(13,14,17,0) 22%,rgba(13,14,17,.6) 50%,rgba(13,14,17,.92) 72%,var(--asphalt) 100%)}}
+/* 2.º com o ordinal pequeno */
+.count b sup{font-size:.42em;vertical-align:top;margin-left:.04em;position:relative;top:.1em}
+/* história: retrato ao lado do texto no tablet */
+@media (min-width:600px) and (max-width:900px){.story .head.has-portrait{grid-template-columns:240px 1fr;align-items:end}}
+/* resultados, motos e equipas */
+.rtable{max-width:860px}
+.rtable th:first-child,.rtable td:first-child{padding-left:10px}
+@media (min-width:521px) and (max-width:900px){.bike.now{grid-column:1/-1}}
+.team>span:first-child{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:#8d9099}
+/* capacete: alinhado com a grelha e menos alto */
+.rv-stage{height:clamp(480px,70svh,760px);min-height:480px;max-height:none}
+.rv-cap{padding:0 0 56px}
+.rv-cap .wrap{padding-inline:20px}
+/* projecto: a segunda linha dos itens não volta para baixo da seta */
+.project ul li{padding-left:1.4em;text-indent:-1.4em}
+/* apoios: três níveis, sem quadrados sozinhos */
+.logos{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.logos>.logo{flex:0 0 calc((100% - 6 * 8px) / 7)}
+.tier.tec .logos>.logo{flex-basis:calc((100% - 8px) / 2);min-height:112px;font-size:1.7rem}
+@media (max-width:900px){.logos>.logo{flex-basis:calc((100% - 3 * 8px) / 4)}}
+@media (max-width:520px){.logos>.logo{flex-basis:calc((100% - 8px) / 2)}.tier.tec .logos>.logo{min-height:90px;font-size:1.4rem}}
+.logo small{font-size:.66rem;letter-spacing:.05em;margin-top:4px;text-wrap:balance}
+.logos.sm{display:block;columns:3 220px;column-gap:28px}
+.logos.sm .logo{display:block;min-height:0;text-align:left;padding:10px 0;border:0;border-bottom:1px solid var(--line-l);background:none;break-inside:avoid;font-size:1.05rem}
+.logos.sm a.logo:hover{box-shadow:none;color:var(--red)}
+.logos.sm .logo small{display:inline;margin:0 0 0 8px}
+/* imprensa: a data fica em baixo, sem espaço morto */
+.card{grid-template-rows:auto 1fr auto}
+@media (max-width:520px){.card{min-height:0}}
+/* galeria: duas colunas no telemóvel */
+@media (max-width:700px){.gallery{grid-template-columns:1fr 1fr}.gallery figure:first-child{grid-column:1/-1}.gallery figcaption{font-size:.58rem;left:6px;bottom:6px}}
+/* rodapé */
+.foot-r{display:grid;gap:10px}
+@media (min-width:641px){.foot-r{justify-items:end}}
 </style>
 
 <a class="skip" href="#conteudo" data-en="Skip to content">Saltar para o conteúdo</a>
@@ -315,9 +372,9 @@ footer .soc a:hover{color:var(--red-hi)}
 <header class="hero" id="topo">
   <img src="img/hero-58.jpg" srcset="img/hero-58-640.webp 640w, img/hero-58-1024.webp 1024w, img/hero-58-1600.webp 1600w" alt="Martim Jesus em inclinação, de joelho no chão, na Honda com o número 58" data-en-alt="Martim Jesus leaning into a corner, knee down, on the Honda with number 58" sizes="100vw" fetchpriority="high" decoding="async">
   <div class="num58" aria-hidden="true">58</div>
-  <div class="intro" hidden aria-hidden="true"><div class="clip">Martim<br>Jesus</div><span class="hint" data-en="Scroll">Desliza</span></div>
+  <div class="intro" hidden aria-hidden="true"><div class="clip">Martim<br>Jesus</div><span class="hint"><span data-en="Two-time Portuguese 600 Champion · 2025 and 2026">Bicampeão Nacional 600 · 2025 e 2026</span><small data-en="Scroll ↓">Desliza ↓</small></span></div>
   <div class="wrap">
-    <div class="sub"><span class="flag" aria-hidden="true"><i></i><i></i></span><span data-en="Two-time Portuguese 600 Champion · 2025 and 2026">Bicampeão Nacional 600 · 2025 e 2026</span></div>
+    <div class="sub title-line"><span class="flag" aria-hidden="true"><i></i><i></i></span><span data-en="Two-time Portuguese 600 Champion · 2025 and 2026">Bicampeão Nacional 600 · 2025 e 2026</span></div>
     <h1 aria-label="Martim Jesus"><span>Martim</span> <span>Jesus</span></h1>
     <div class="sub"><span>Honda CBR600RR</span><span data-en="18 years old · Santo André, Portugal">18 anos · Santo André</span></div>
     <div class="ctas">
@@ -340,7 +397,7 @@ footer .soc a:hover{color:var(--red-hi)}
     <span class="k" data-en="Final round · 2026">Última ronda · 2026</span>
     <h3>Estoril IV</h3>
     <p class="when" data-en="Portuguese Championship · 2–4 October 2026 · title already won">Campeonato Nacional de Velocidade · 2 a 4 de Outubro de 2026 · título já garantido</p>
-    <div class="count"><b data-en="2nd">2.º</b><span data-en="in both races">nas duas corridas</span></div>
+    <div class="count"><b data-en="2<sup>nd</sup>">2<sup>.º</sup></b><span data-en="in both races">nas duas corridas</span></div>
   </div>
   <div class="stats">
     <div class="stat"><b data-count="2">2</b><span data-en="national titles in a row">títulos nacionais seguidos</span></div>
@@ -463,7 +520,7 @@ footer .soc a:hover{color:var(--red-hi)}
     <p data-en="The gear Martim uses, available to buy: NEXX helmets, HEL Performance brake lines, Arrow exhausts and much more, shipped across the EU.">O equipamento que o Martim usa, à venda: capacetes NEXX, linhas de travão HEL Performance, escapes Arrow e muito mais, com envio para toda a UE.</p>
     <span class="btn red" style="pointer-events:none"><span data-en="Shop">Loja</span> <span class="arr" aria-hidden="true">↗</span></span>
   </a>
-  <div class="tier">
+  <div class="tier tec">
     <span class="k" data-en="Technical partners">Apoios técnicos</span>
     <div class="logos">
       <a class="logo" href="https://www.nexx-helmets.com/" target="_blank" rel="noopener">NEXX<small data-en="helmets">capacetes</small></a>
@@ -473,35 +530,35 @@ footer .soc a:hover{color:var(--red-hi)}
   <div class="tier">
     <span class="k" data-en="Sponsors">Patrocinadores</span>
     <div class="logos">
-      <a class="logo" href="https://www.bricomarche.pt/lojas/sines/" target="_blank" rel="noopener">Bricomarché Sines<small data-en="DIY store · Sines">bricolage · Sines</small></a>
-      <a class="logo" href="https://gfgdconstruct.com/" target="_blank" rel="noopener">GFGD Construct<small data-en="construction · Sines">construção · Sines</small></a>
-      <a class="logo" href="https://www.facebook.com/GMSantiagodoCacem/" target="_blank" rel="noopener">Grupo Motard<small data-en="Santiago do Cacém">Santiago do Cacém</small></a>
-      <a class="logo" href="https://hparrinha.pt/" target="_blank" rel="noopener">HParrinha<small data-en="electrical · Sines">electricidade · Sines</small></a>
+      <a class="logo" href="https://www.bricomarche.pt/lojas/sines/" target="_blank" rel="noopener">Bricomarché Sines<small data-en="DIY store&nbsp;· Sines">bricolage&nbsp;· Sines</small></a>
+      <a class="logo" href="https://gfgdconstruct.com/" target="_blank" rel="noopener">GFGD Construct<small data-en="construction&nbsp;· Sines">construção&nbsp;· Sines</small></a>
+      <a class="logo" href="https://www.facebook.com/GMSantiagodoCacem/" target="_blank" rel="noopener">Grupo Motard<small data-en="Santiago do Cacém&nbsp;· Facebook">Santiago do Cacém&nbsp;· Facebook</small></a>
+      <a class="logo" href="https://hparrinha.pt/" target="_blank" rel="noopener">HParrinha<small data-en="electrical&nbsp;· Sines">electricidade&nbsp;· Sines</small></a>
       <a class="logo" href="https://www.jomotos.pt/" target="_blank" rel="noopener">Jomotos<small data-en="motorcycle dealer">concessionário de motos</small></a>
       <a class="logo" href="https://moto-pecas.pt/" target="_blank" rel="noopener">Moto Peças PT<small data-en="motorcycle parts">peças de moto</small></a>
       <div class="logo">NC Carvalho</div>
-      <a class="logo" href="https://www.instagram.com/oasis.fernaoferro/" target="_blank" rel="noopener">Oásis<small data-en="events · Fernão Ferro">eventos · Fernão Ferro</small></a>
+      <a class="logo" href="https://www.instagram.com/oasis.fernaoferro/" target="_blank" rel="noopener">Oásis<small data-en="events&nbsp;· Fernão Ferro&nbsp;· Instagram">eventos&nbsp;· Fernão Ferro&nbsp;· Instagram</small></a>
       <a class="logo" href="https://www.psasines.pt/" target="_blank" rel="noopener">PSA Sines<small data-en="container terminal">terminal de contentores</small></a>
-      <a class="logo" href="https://www.facebook.com/publicontroll/" target="_blank" rel="noopener">Publicontrol<small data-en="outdoor advertising">publicidade exterior</small></a>
-      <a class="logo" href="https://tgftransportes.com/" target="_blank" rel="noopener">TGF Transportes<small data-en="haulage · Santo André">transportes · Santo André</small></a>
-      <a class="logo" href="https://www.wavemarin.com/" target="_blank" rel="noopener">Wave Marine<small data-en="marine services · Sines">serviços marítimos · Sines</small></a>
+      <a class="logo" href="https://www.facebook.com/publicontroll/" target="_blank" rel="noopener">Publicontrol<small data-en="outdoor advertising&nbsp;· Facebook">publicidade exterior&nbsp;· Facebook</small></a>
+      <a class="logo" href="https://tgftransportes.com/" target="_blank" rel="noopener">TGF Transportes<small data-en="haulage&nbsp;· Santo André">transportes&nbsp;· Santo André</small></a>
+      <a class="logo" href="https://www.wavemarin.com/" target="_blank" rel="noopener">Wave Marine<small data-en="marine services&nbsp;· Sines">serviços marítimos&nbsp;· Sines</small></a>
       <a class="logo" href="https://xmamotors.com/en" target="_blank" rel="noopener">Xmitha<small data-en="rider management">agência de pilotos</small></a>
     </div>
   </div>
   <div class="tier">
     <span class="k" data-en="Partners">Parceiros</span>
     <div class="logos sm">
-      <a class="logo" href="https://www.facebook.com/alphafitness.pt/" target="_blank" rel="noopener">Alpha Fitness<small data-en="gym · Santo André">ginásio · Santo André</small></a>
-      <a class="logo" href="https://www.facebook.com/FarmaciaFontes/" target="_blank" rel="noopener">Farmácia Fontes<small data-en="pharmacy · Santo André">farmácia · Santo André</small></a>
+      <a class="logo" href="https://www.facebook.com/alphafitness.pt/" target="_blank" rel="noopener">Alpha Fitness<small data-en="gym&nbsp;· Santo André&nbsp;· Facebook">ginásio&nbsp;· Santo André&nbsp;· Facebook</small></a>
+      <a class="logo" href="https://www.facebook.com/FarmaciaFontes/" target="_blank" rel="noopener">Farmácia Fontes<small data-en="pharmacy&nbsp;· Santo André&nbsp;· Facebook">farmácia&nbsp;· Santo André&nbsp;· Facebook</small></a>
       <a class="logo" href="https://www.fmp.pt/" target="_blank" rel="noopener">FMP<small data-en="motorcycling federation">federação de motociclismo</small></a>
       <a class="logo" href="https://fullgrip.ai/" target="_blank" rel="noopener">FullGrip.ai<small data-en="website and digital">site e digital</small></a>
-      <a class="logo" href="https://www.facebook.com/HPMotoresSport/" target="_blank" rel="noopener">HPTv<small data-en="motorsport content">conteúdos de motorsport</small></a>
-      <a class="logo" href="https://www.instagram.com/iconic.fitnesstudio/" target="_blank" rel="noopener">Iconic Fitness Studio<small data-en="fitness">fitness</small></a>
-      <a class="logo" href="https://www.jmccatering.pt/" target="_blank" rel="noopener">JMC Catering<small data-en="catering · Seixal">catering · Seixal</small></a>
+      <a class="logo" href="https://www.facebook.com/HPMotoresSport/" target="_blank" rel="noopener">HPTv<small data-en="motorsport content&nbsp;· Facebook">conteúdos de motorsport&nbsp;· Facebook</small></a>
+      <a class="logo" href="https://www.instagram.com/iconic.fitnesstudio/" target="_blank" rel="noopener">Iconic Fitness Studio<small data-en="fitness&nbsp;· Instagram">fitness&nbsp;· Instagram</small></a>
+      <a class="logo" href="https://www.jmccatering.pt/" target="_blank" rel="noopener">JMC Catering<small data-en="catering&nbsp;· Seixal">catering&nbsp;· Seixal</small></a>
       <a class="logo" href="https://www.npmotos.pt/" target="_blank" rel="noopener">NPmotos<small data-en="motorcycle workshop">oficina de motos</small></a>
       <div class="logo">On Track<small data-en="Santo André">Santo André</small></div>
-      <a class="logo" href="https://www.facebook.com/Quiosque-DIgital-1599627226721357/" target="_blank" rel="noopener">Quiosque Digital<small data-en="Santo André">Santo André</small></a>
-      <a class="logo" href="https://www.st-santocede.pt/pt" target="_blank" rel="noopener">Santocede<small data-en="temp agency · Santo André">trabalho temporário · Santo André</small></a>
+      <a class="logo" href="https://www.facebook.com/Quiosque-DIgital-1599627226721357/" target="_blank" rel="noopener">Quiosque Digital<small data-en="Santo André&nbsp;· Facebook">Santo André&nbsp;· Facebook</small></a>
+      <a class="logo" href="https://www.st-santocede.pt/pt" target="_blank" rel="noopener">Santocede<small data-en="temp agency&nbsp;· Santo André">trabalho temporário&nbsp;· Santo André</small></a>
     </div>
   </div>
 </div></section>
@@ -509,25 +566,25 @@ footer .soc a:hover{color:var(--red-hi)}
 <section class="press" id="imprensa"><div class="wrap">
   <h2 data-en="In the press">Na imprensa</h2>
   <div class="cards">
-    <a class="card" href="https://motozeni.com/pt/noticias/martim-jesus-fecha-a-epoca-com-o-numero-1" target="_blank" rel="noopener"><span class="k">MotoZeni</span><b lang="pt-PT">O Martim Jesus fechou a época com o número 1 na mota</b><span data-en="5 Oct 2026">5 Out 2026</span></a>
-    <a class="card" href="https://motozeni.com/pt/noticias/o-martim-jesus-ja-corre-com-a-motozeni" target="_blank" rel="noopener"><span class="k">MotoZeni</span><b lang="pt-PT">O Martim Jesus já corre com a MotoZeni</b><span data-en="3 Oct 2026">3 Out 2026</span></a>
-    <a class="card" href="https://motojornal.pt/cnv-moto-martim-jesus-garante-antecipadamente-o-titulo-supersport-2026/" target="_blank" rel="noopener"><span class="k">Motojornal</span><b lang="pt-PT">Martim Jesus garante antecipadamente o título Supersport 2026</b><span data-en="14 Sep 2026">14 Set 2026</span></a>
-    <a class="card" href="https://motojornal.pt/cnv-moto-2026-saio-do-estoril-com-duas-vitorias-e-na-lideranca-o-que-me-da-ainda-mais-motivacao-diz-martim-jesus/" target="_blank" rel="noopener"><span class="k">Motojornal</span><b lang="pt-PT">«Saio do Estoril com duas vitórias e na liderança»</b><span data-en="21 May 2026">21 Mai 2026</span></a>
-    <a class="card" href="https://osetubalense.com/local/santiago-do-cacem/martim-jesus-figura-do-ano-do-concelho-de-santiago-do-cacem" target="_blank" rel="noopener"><span class="k">O Setubalense</span><b lang="pt-PT">Martim Jesus, Figura do Ano do concelho de Santiago do Cacém</b><span data-en="9 Apr 2026">9 Abr 2026</span></a>
-    <a class="card" href="https://www.record.pt/modalidades/motores/motociclismo/detalhe/martim-jesus-quer-aprender-com-os-melhores-em-portimao-o-meu-maior-sonho-e-chegar-a-um-dos-mundiais" target="_blank" rel="noopener"><span class="k">Record</span><b lang="pt-PT">Martim Jesus quer aprender com os melhores em Portimão</b><span data-en="29 Mar 2026">29 Mar 2026</span></a>
+    <a class="card" href="https://motozeni.com/pt/noticias/martim-jesus-fecha-a-epoca-com-o-numero-1" target="_blank" rel="noopener"><span class="k">MotoZeni <span aria-hidden="true">↗</span></span><b lang="pt-PT">O Martim Jesus fechou a época com o número 1 na mota</b><span data-en="5 Oct 2026">5 Out 2026</span></a>
+    <a class="card" href="https://motozeni.com/pt/noticias/o-martim-jesus-ja-corre-com-a-motozeni" target="_blank" rel="noopener"><span class="k">MotoZeni <span aria-hidden="true">↗</span></span><b lang="pt-PT">O Martim Jesus já corre com a MotoZeni</b><span data-en="3 Oct 2026">3 Out 2026</span></a>
+    <a class="card" href="https://motojornal.pt/cnv-moto-martim-jesus-garante-antecipadamente-o-titulo-supersport-2026/" target="_blank" rel="noopener"><span class="k">Motojornal <span aria-hidden="true">↗</span></span><b lang="pt-PT">Martim Jesus garante antecipadamente o título Supersport 2026</b><span data-en="14 Sep 2026">14 Set 2026</span></a>
+    <a class="card" href="https://motojornal.pt/cnv-moto-2026-saio-do-estoril-com-duas-vitorias-e-na-lideranca-o-que-me-da-ainda-mais-motivacao-diz-martim-jesus/" target="_blank" rel="noopener"><span class="k">Motojornal <span aria-hidden="true">↗</span></span><b lang="pt-PT">«Saio do Estoril com duas vitórias e na liderança»</b><span data-en="21 May 2026">21 Mai 2026</span></a>
+    <a class="card" href="https://osetubalense.com/local/santiago-do-cacem/martim-jesus-figura-do-ano-do-concelho-de-santiago-do-cacem" target="_blank" rel="noopener"><span class="k">O Setubalense <span aria-hidden="true">↗</span></span><b lang="pt-PT">Martim Jesus, Figura do Ano do concelho de Santiago do Cacém</b><span data-en="9 Apr 2026">9 Abr 2026</span></a>
+    <a class="card" href="https://www.record.pt/modalidades/motores/motociclismo/detalhe/martim-jesus-quer-aprender-com-os-melhores-em-portimao-o-meu-maior-sonho-e-chegar-a-um-dos-mundiais" target="_blank" rel="noopener"><span class="k">Record <span aria-hidden="true">↗</span></span><b lang="pt-PT">Martim Jesus quer aprender com os melhores em Portimão</b><span data-en="29 Mar 2026">29 Mar 2026</span></a>
   </div>
 </div></section>
 
 <section class="gallery" id="galeria" aria-label="Galeria" data-en-label="Gallery">
   <figure><img src="img/com-o-1.jpg" srcset="img/com-o-1-640.webp 640w, img/com-o-1-1024.webp 1024w, img/com-o-1-1500.webp 1500w" alt="A Honda dourada com o número 1 em inclinação, no Estoril" data-en-alt="The gold Honda with number 1 leaning into a corner at Estoril" sizes="(min-width:701px) 33vw, 100vw" decoding="async" loading="lazy"><figcaption data-en="With the 1 · Estoril, Oct 2026">Com o 1 · Estoril, Out. 2026</figcaption></figure>
-  <figure><img src="img/grelha-equipa.jpg" srcset="img/grelha-equipa-640.webp 640w, img/grelha-equipa-1024.webp 1024w, img/grelha-equipa-1500.webp 1500w" alt="Martim sentado na mota na grelha de partida, com a equipa à volta" data-en-alt="Martim on the bike on the starting grid, with the team around him" sizes="(min-width:701px) 33vw, 100vw" decoding="async" loading="lazy"><figcaption data-en="On the grid">Na grelha</figcaption></figure>
-  <figure><img src="img/champanhe.jpg" srcset="img/champanhe-640.webp 640w, img/champanhe-1024.webp 1024w, img/champanhe-1500.webp 1500w" alt="Martim a festejar no pódio com champanhe" data-en-alt="Martim celebrating on the podium with champagne" sizes="(min-width:701px) 33vw, 100vw" decoding="async" style="object-position:50% 30%" loading="lazy"><figcaption data-en="Champion · Estoril, Sept 2026">Campeão · Estoril, Set. 2026</figcaption></figure>
-  <figure><img src="img/campeao-capacete.jpg" srcset="img/campeao-capacete-640.webp 640w, img/campeao-capacete-1024.webp 1024w, img/campeao-capacete-1500.webp 1500w" alt="Capacete CAMPEÃO pousado no asfalto à frente da mota dourada" data-en-alt="The CAMPEÃO helmet on the asphalt in front of the gold bike" sizes="(min-width:701px) 33vw, 100vw" decoding="async" loading="lazy"><figcaption data-en="The champion's helmet">O capacete de campeão</figcaption></figure>
-  <figure><img src="img/hero-nexx.jpg" srcset="img/hero-nexx-640.webp 640w, img/hero-nexx-1024.webp 1024w, img/hero-nexx-1600.webp 1600w" alt="Martim em inclinação na Honda com o número 48" data-en-alt="Martim leaning into a corner on the Honda with number 48" sizes="(min-width:701px) 33vw, 100vw" decoding="async" style="object-position:40% 30%" loading="lazy"><figcaption data-en="Racing as 48 in the nationals">Com o 48, no nacional</figcaption></figure>
-  <figure><img src="img/ritual-box.jpg" srcset="img/ritual-box-640.webp 640w, img/ritual-box-1024.webp 1024w, img/ritual-box-1500.webp 1500w" alt="Martim curvado em frente à mota, à saída da box" data-en-alt="Martim bent over in front of the bike, leaving the pit box" sizes="(min-width:701px) 33vw, 100vw" decoding="async" style="object-position:60% 50%" loading="lazy"><figcaption data-en="Before going out">Antes de sair</figcaption></figure>
-  <figure><img src="img/punho-no-ar.jpg" srcset="img/punho-no-ar-640.webp 640w, img/punho-no-ar-1024.webp 1024w, img/punho-no-ar-1500.webp 1500w" alt="Martim de punho no ar, de viseira aberta, na mota com o número 1" data-en-alt="Martim with his fist raised, visor open, on the bike with number 1" sizes="(min-width:701px) 33vw, 100vw" decoding="async" style="object-position:50% 35%" loading="lazy"><figcaption data-en="Last race of the season">Última corrida da época</figcaption></figure>
-  <figure><img src="img/nexx-preto.jpg" srcset="img/nexx-preto-640.webp 640w, img/nexx-preto-1024.webp 1024w, img/nexx-preto-1500.webp 1500w" alt="Martim em inclinação, de capacete NEXX preto, com o 58 nas costas do fato" data-en-alt="Martim leaning into a corner in a black NEXX helmet, the 58 on the back of his suit" sizes="(min-width:701px) 33vw, 100vw" decoding="async" loading="lazy"><figcaption data-en="On track">Em pista</figcaption></figure>
-  <figure><img src="img/curva-cima.jpg" srcset="img/curva-cima-640.webp 640w, img/curva-cima-1024.webp 1024w, img/curva-cima-1066.webp 1066w" alt="Martim sozinho numa curva, visto de cima" data-en-alt="Martim alone in a corner, seen from above" sizes="(min-width:701px) 33vw, 100vw" decoding="async" style="object-position:50% 62%" loading="lazy"><figcaption data-en="From above">Visto de cima</figcaption></figure>
+  <figure><img src="img/grelha-equipa.jpg" srcset="img/grelha-equipa-640.webp 640w, img/grelha-equipa-1024.webp 1024w, img/grelha-equipa-1500.webp 1500w" alt="Martim sentado na mota na grelha de partida, com a equipa à volta" data-en-alt="Martim on the bike on the starting grid, with the team around him" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption data-en="On the grid">Na grelha</figcaption></figure>
+  <figure><img src="img/champanhe.jpg" srcset="img/champanhe-640.webp 640w, img/champanhe-1024.webp 1024w, img/champanhe-1500.webp 1500w" alt="Martim a festejar no pódio com champanhe" data-en-alt="Martim celebrating on the podium with champagne" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:50% 30%" loading="lazy"><figcaption data-en="Champion · Estoril, Sept 2026">Campeão · Estoril, Set. 2026</figcaption></figure>
+  <figure><img src="img/campeao-capacete.jpg" srcset="img/campeao-capacete-640.webp 640w, img/campeao-capacete-1024.webp 1024w, img/campeao-capacete-1500.webp 1500w" alt="Capacete CAMPEÃO pousado no asfalto à frente da mota dourada" data-en-alt="The CAMPEÃO helmet on the asphalt in front of the gold bike" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption data-en="The champion's helmet">O capacete de campeão</figcaption></figure>
+  <figure><img src="img/hero-nexx.jpg" srcset="img/hero-nexx-640.webp 640w, img/hero-nexx-1024.webp 1024w, img/hero-nexx-1600.webp 1600w" alt="Martim em inclinação na Honda com o número 48" data-en-alt="Martim leaning into a corner on the Honda with number 48" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:40% 30%" loading="lazy"><figcaption data-en="Racing as 48 in the nationals">Com o 48, no nacional</figcaption></figure>
+  <figure><img src="img/ritual-box.jpg" srcset="img/ritual-box-640.webp 640w, img/ritual-box-1024.webp 1024w, img/ritual-box-1500.webp 1500w" alt="Martim curvado em frente à mota, à saída da box" data-en-alt="Martim bent over in front of the bike, leaving the pit box" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:60% 50%" loading="lazy"><figcaption data-en="Before going out">Antes de sair</figcaption></figure>
+  <figure><img src="img/punho-no-ar.jpg" srcset="img/punho-no-ar-640.webp 640w, img/punho-no-ar-1024.webp 1024w, img/punho-no-ar-1500.webp 1500w" alt="Martim de punho no ar, de viseira aberta, na mota com o número 1" data-en-alt="Martim with his fist raised, visor open, on the bike with number 1" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:50% 35%" loading="lazy"><figcaption data-en="Last race of the season">Última corrida da época</figcaption></figure>
+  <figure><img src="img/nexx-preto.jpg" srcset="img/nexx-preto-640.webp 640w, img/nexx-preto-1024.webp 1024w, img/nexx-preto-1500.webp 1500w" alt="Martim em inclinação, de capacete NEXX preto, com o 58 nas costas do fato" data-en-alt="Martim leaning into a corner in a black NEXX helmet, the 58 on the back of his suit" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption data-en="On track">Em pista</figcaption></figure>
+  <figure><img src="img/curva-cima.jpg" srcset="img/curva-cima-640.webp 640w, img/curva-cima-1024.webp 1024w, img/curva-cima-1066.webp 1066w" alt="Martim sozinho numa curva, visto de cima" data-en-alt="Martim alone in a corner, seen from above" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:50% 62%" loading="lazy"><figcaption data-en="From above">Visto de cima</figcaption></figure>
 </section>
 
 </main>
@@ -537,9 +594,9 @@ footer .soc a:hover{color:var(--red-hi)}
     <span class="mono">MJ<em>58</em></span>
     <p><span data-en="Partnerships and press:">Parcerias e imprensa:</span> <a href="mailto:contacto@martimjesus58.com">contacto@martimjesus58.com</a></p>
   </div>
-  <div style="display:grid;gap:10px;justify-items:end">
+  <div class="foot-r">
     <div class="soc"><a href="https://www.instagram.com/martimjesus58/" target="_blank" rel="noopener">Instagram</a><a href="https://motozeni.com/?utm_source=martimjesus58&amp;utm_medium=referral&amp;utm_campaign=piloto&amp;utm_content=rodape" target="_blank" rel="noopener">MotoZeni.com</a></div>
-    <p class="proto"><span data-en="Site by">Site por</span> <a href="https://fullgrip.ai/" target="_blank" rel="noopener">FullGrip.ai</a></p>
+    <p class="proto">© 2026 Martim Jesus · <span data-en="Site by">Site por</span> <a href="https://fullgrip.ai/" target="_blank" rel="noopener">FullGrip.ai</a></p>
   </div>
 </div></footer>
 
