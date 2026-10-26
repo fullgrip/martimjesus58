@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Martim Jesus #58 · Two-time Portuguese 600 Road Racing Champion</title>
+<title>Martim Jesus #58 · Two-time Portuguese 600 Champion</title>
 <meta name="description" content="Martim Jesus, road racer from Santo André, Portugal: two-time Portuguese 600 champion (2025 and 2026) on the Honda CBR600RR. Results, story and supporters.">
 <link rel="canonical" href="https://martimjesus58.com/en/">
 <link rel="alternate" hreflang="pt-PT" href="https://martimjesus58.com/">
@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Martim Jesus #58">
-<meta property="og:title" content="Martim Jesus #58 · Two-time Portuguese 600 Road Racing Champion">
+<meta property="og:title" content="Martim Jesus #58 · Two-time Portuguese 600 Champion">
 <meta property="og:description" content="Martim Jesus, road racer from Santo André, Portugal: two-time Portuguese 600 champion (2025 and 2026) on the Honda CBR600RR. Results, story and supporters.">
 <meta property="og:url" content="https://martimjesus58.com/en/">
 <meta property="og:image" content="https://martimjesus58.com/og.jpg">
@@ -24,9 +24,11 @@
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:alt" content="Martim Jesus in the 2026 SSP 600 National Champion shirt, next to the gold Honda with number 1">
 <meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image:alt" content="Martim Jesus in the 2026 SSP 600 National Champion shirt, next to the gold Honda with number 1">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://martimjesus58.com/#website", "url": "https://martimjesus58.com/", "name": "Martim Jesus #58", "alternateName": ["Martim Jesus", "MJ58"], "inLanguage": ["pt-PT", "en", "es"], "about": {"@id": "https://martimjesus58.com/#person"}}, {"@type": "Person", "@id": "https://martimjesus58.com/#person", "name": "Martim Jesus", "alternateName": "Martim Jesus #58", "url": "https://martimjesus58.com/", "image": "https://martimjesus58.com/og.jpg", "description": "Martim Jesus, piloto de Santo André, bicampeão nacional 600 em 2025 e 2026 na Honda CBR600RR. Resultados, percurso e apoios.", "jobTitle": "Piloto de motociclismo de velocidade", "nationality": {"@type": "Country", "name": "Portugal"}, "homeLocation": {"@type": "Place", "name": "Santo André, Santiago do Cacém, Portugal"}, "award": ["Campeão Nacional Stock 600 · 2025", "Campeão Nacional Supersport 600 · 2026"], "email": "mailto:contacto@martimjesus58.com", "sameAs": ["https://www.instagram.com/martimjesus58/", "https://motozeni.com/pt/pilotos/martim-jesus"]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://martimjesus58.com/#website", "url": "https://martimjesus58.com/", "name": "Martim Jesus #58", "alternateName": ["Martim Jesus", "MJ58"], "inLanguage": ["pt-PT", "en", "es"], "about": {"@id": "https://martimjesus58.com/#person"}}, {"@type": "Person", "@id": "https://martimjesus58.com/#person", "name": "Martim Jesus", "alternateName": "Martim Jesus #58", "url": "https://martimjesus58.com/", "image": "https://martimjesus58.com/og.jpg", "description": "Martim Jesus, road racer from Santo André, Portugal: two-time Portuguese 600 champion (2025 and 2026) on the Honda CBR600RR. Results, story and supporters.", "jobTitle": "Piloto de motociclismo de velocidade", "nationality": {"@type": "Country", "name": "Portugal"}, "homeLocation": {"@type": "Place", "name": "Santo André, Santiago do Cacém, Portugal"}, "award": ["Campeão Nacional Stock 600 · 2025", "Campeão Nacional Supersport 600 · 2026"], "email": "mailto:contacto@martimjesus58.com", "sameAs": ["https://www.instagram.com/martimjesus58/", "https://motozeni.com/pt/pilotos/martim-jesus"]}]}</script>
 <link rel="preload" href="/fonts/big-shoulders-display.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -351,6 +353,22 @@ footer .soc a:hover{color:var(--red-hi)}
 /* rodapé */
 .foot-r{display:grid;gap:10px}
 @media (min-width:641px){.foot-r{justify-items:end}}
+
+/* ===== QA da versão espanhola (26/10/2026) ===== */
+/* tabela a 360 px: o cabeçalho «Clasificación» empurrava a coluna dos pódios para fora */
+@media (max-width:520px){.rtable th{letter-spacing:.04em}}
+/* capacete: «Em breve» e o texto empilhados, sem se sobreporem em ecrãs baixos */
+.rv-stage{height:auto;min-height:clamp(480px,70svh,760px);display:flex;flex-direction:column;justify-content:flex-end;padding-top:48px}
+.rv-soon{position:relative;top:auto;left:auto;transform:none;align-self:center;margin:0 0 20px}
+.rv-cap{position:relative}
+/* telemóvel baixo: o 58 grande tapava o título */
+@media (max-width:640px) and (max-height:700px){.num58{display:none}}
+/* botões do hero cabem numa linha a 360 px */
+@media (max-width:380px){.hero .btn{padding-inline:14px;letter-spacing:.06em}}
+/* menu arrastável: sinal de que há mais à direita */
+@media (max-width:900px){.links{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}}
+.press-note{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:#8d9099;margin:-16px 0 20px}
+.press-note:empty{display:none}
 </style>
 </head>
 <body>
@@ -359,7 +377,7 @@ footer .soc a:hover{color:var(--red-hi)}
 <div class="mzbar"><div class="wrap">
   <a href="https://motozeni.com/en/?utm_source=martimjesus58&amp;utm_medium=referral&amp;utm_campaign=piloto&amp;utm_content=faixa" target="_blank" rel="noopener"><span>Supported by</span> <b>MotoZeni.com</b></a>
   <nav class="lang" aria-label="Language">
-    <a href="/" hreflang="pt" lang="pt-PT">PT</a>
+    <a href="/" hreflang="pt-PT" lang="pt-PT">PT</a>
     <a href="/en/" hreflang="en" lang="en" aria-current="page">EN</a>
     <a href="/es/" hreflang="es" lang="es">ES</a>
   </nav>
@@ -402,7 +420,7 @@ footer .soc a:hover{color:var(--red-hi)}
 <section class="race" id="corrida"><div class="wrap">
   <h2 class="sr-only">2026 season</h2>
   <div class="nextbox">
-    <figure><img src="/img/campeao-retrato.jpg" srcset="/img/campeao-retrato-640.webp 640w, /img/campeao-retrato-1024.webp 1024w, /img/campeao-retrato-1600.webp 1600w" alt="Martim Jesus in the 2026 SSP 600 National Champion shirt, with the CAMPEÃO helmet, next to the gold bike with number 1" sizes="(min-width:901px) 460px, 100vw" loading="lazy" decoding="async"></figure>
+    <figure><img src="/img/campeao-retrato.jpg" srcset="/img/campeao-retrato-640.webp 640w, /img/campeao-retrato-1024.webp 1024w, /img/campeao-retrato-1600.webp 1600w" alt="Martim Jesus in the 2026 SSP 600 National Champion shirt, with the CAMPEÃO helmet, next to the gold bike with number 1" sizes="(min-width:901px) 460px, calc(100vw - 40px)" loading="lazy" decoding="async"></figure>
     <span class="k">Final round · 2026</span>
     <h3>Estoril IV</h3>
     <p class="when">Portuguese Championship · 2–4 October 2026 · title already won</p>
@@ -419,7 +437,7 @@ footer .soc a:hover{color:var(--red-hi)}
 
 <section class="story" id="historia"><div class="wrap"><div class="pinbox">
   <div class="head has-portrait">
-    <figure class="portrait"><img src="/img/retrato.jpg" srcset="/img/retrato-640.webp 640w, /img/retrato-990.webp 990w" alt="Martim Jesus smiling in his race suit, helmet in hand, by the track" sizes="320px" loading="lazy" decoding="async"></figure>
+    <figure class="portrait"><img src="/img/retrato.jpg" srcset="/img/retrato-640.webp 640w, /img/retrato-990.webp 990w" alt="Martim Jesus smiling in his race suit, helmet in hand, by the track" sizes="(max-width:900px) 280px, 320px" loading="lazy" decoding="async"></figure>
     <div class="head-txt">
     <h2>From a 90 cc to the World Championship</h2>
     <p>He started at 9, on a 90 cc, at the RL 58 Performance school in Santo André. Nine years later he is a two-time national champion, races in Spain and has made his world championship debut.</p>
@@ -574,6 +592,7 @@ footer .soc a:hover{color:var(--red-hi)}
 
 <section class="press" id="imprensa"><div class="wrap">
   <h2>In the press</h2>
+  <p class="press-note">Articles in Portuguese.</p>
   <div class="cards">
     <a class="card" href="https://motozeni.com/pt/noticias/martim-jesus-fecha-a-epoca-com-o-numero-1" target="_blank" rel="noopener"><span class="k">MotoZeni <span aria-hidden="true">↗</span></span><b lang="pt-PT">O Martim Jesus fechou a época com o número 1 na mota</b><span>5 Oct 2026</span></a>
     <a class="card" href="https://motozeni.com/pt/noticias/o-martim-jesus-ja-corre-com-a-motozeni" target="_blank" rel="noopener"><span class="k">MotoZeni <span aria-hidden="true">↗</span></span><b lang="pt-PT">O Martim Jesus já corre com a MotoZeni</b><span>3 Oct 2026</span></a>

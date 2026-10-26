@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Martim Jesus #58 · Bicampeón de Portugal de Velocidad 600</title>
-<meta name="description" content="Martim Jesus, piloto de velocidad de Santo André (Portugal): bicampeón de Portugal de 600 en 2025 y 2026 con la Honda CBR600RR. Resultados, trayectoria y patrocinadores.">
+<meta name="description" content="Martim Jesus, piloto de Santo André (Portugal), bicampeón de Portugal de 600 en 2025 y 2026 con la Honda CBR600RR. Resultados, trayectoria y apoyos.">
 <link rel="canonical" href="https://martimjesus58.com/es/">
 <link rel="alternate" hreflang="pt-PT" href="https://martimjesus58.com/">
 <link rel="alternate" hreflang="en" href="https://martimjesus58.com/en/">
@@ -16,17 +16,19 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Martim Jesus #58">
 <meta property="og:title" content="Martim Jesus #58 · Bicampeón de Portugal de Velocidad 600">
-<meta property="og:description" content="Martim Jesus, piloto de velocidad de Santo André (Portugal): bicampeón de Portugal de 600 en 2025 y 2026 con la Honda CBR600RR. Resultados, trayectoria y patrocinadores.">
+<meta property="og:description" content="Martim Jesus, piloto de Santo André (Portugal), bicampeón de Portugal de 600 en 2025 y 2026 con la Honda CBR600RR. Resultados, trayectoria y apoyos.">
 <meta property="og:url" content="https://martimjesus58.com/es/">
 <meta property="og:image" content="https://martimjesus58.com/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:alt" content="Martim Jesus con la camiseta de Campeón Nacional SSP 600 2026, junto a la Honda dorada con el número 1">
+<meta property="og:image:alt" content="Martim Jesus con la camiseta de campeón nacional de SSP 600 2026, junto a la Honda dorada con el número 1">
 <meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image:alt" content="Martim Jesus con la camiseta de Campeón Nacional SSP 600 2026, junto a la Honda dorada con el número 1">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://martimjesus58.com/#website", "url": "https://martimjesus58.com/", "name": "Martim Jesus #58", "alternateName": ["Martim Jesus", "MJ58"], "inLanguage": ["pt-PT", "en", "es"], "about": {"@id": "https://martimjesus58.com/#person"}}, {"@type": "Person", "@id": "https://martimjesus58.com/#person", "name": "Martim Jesus", "alternateName": "Martim Jesus #58", "url": "https://martimjesus58.com/", "image": "https://martimjesus58.com/og.jpg", "description": "Martim Jesus, piloto de Santo André, bicampeão nacional 600 em 2025 e 2026 na Honda CBR600RR. Resultados, percurso e apoios.", "jobTitle": "Piloto de motociclismo de velocidade", "nationality": {"@type": "Country", "name": "Portugal"}, "homeLocation": {"@type": "Place", "name": "Santo André, Santiago do Cacém, Portugal"}, "award": ["Campeão Nacional Stock 600 · 2025", "Campeão Nacional Supersport 600 · 2026"], "email": "mailto:contacto@martimjesus58.com", "sameAs": ["https://www.instagram.com/martimjesus58/", "https://motozeni.com/pt/pilotos/martim-jesus"]}]}</script>
+<meta name="twitter:image:alt" content="Martim Jesus con la camiseta de campeón nacional de SSP 600 2026, junto a la Honda dorada con el número 1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://martimjesus58.com/#website", "url": "https://martimjesus58.com/", "name": "Martim Jesus #58", "alternateName": ["Martim Jesus", "MJ58"], "inLanguage": ["pt-PT", "en", "es"], "about": {"@id": "https://martimjesus58.com/#person"}}, {"@type": "Person", "@id": "https://martimjesus58.com/#person", "name": "Martim Jesus", "alternateName": "Martim Jesus #58", "url": "https://martimjesus58.com/", "image": "https://martimjesus58.com/og.jpg", "description": "Martim Jesus, piloto de Santo André (Portugal), bicampeón de Portugal de 600 en 2025 y 2026 con la Honda CBR600RR. Resultados, trayectoria y apoyos.", "jobTitle": "Piloto de motociclismo de velocidade", "nationality": {"@type": "Country", "name": "Portugal"}, "homeLocation": {"@type": "Place", "name": "Santo André, Santiago do Cacém, Portugal"}, "award": ["Campeão Nacional Stock 600 · 2025", "Campeão Nacional Supersport 600 · 2026"], "email": "mailto:contacto@martimjesus58.com", "sameAs": ["https://www.instagram.com/martimjesus58/", "https://motozeni.com/pt/pilotos/martim-jesus"]}]}</script>
 <link rel="preload" href="/fonts/big-shoulders-display.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -351,6 +353,22 @@ footer .soc a:hover{color:var(--red-hi)}
 /* rodapé */
 .foot-r{display:grid;gap:10px}
 @media (min-width:641px){.foot-r{justify-items:end}}
+
+/* ===== QA da versão espanhola (26/10/2026) ===== */
+/* tabela a 360 px: o cabeçalho «Clasificación» empurrava a coluna dos pódios para fora */
+@media (max-width:520px){.rtable th{letter-spacing:.04em}}
+/* capacete: «Em breve» e o texto empilhados, sem se sobreporem em ecrãs baixos */
+.rv-stage{height:auto;min-height:clamp(480px,70svh,760px);display:flex;flex-direction:column;justify-content:flex-end;padding-top:48px}
+.rv-soon{position:relative;top:auto;left:auto;transform:none;align-self:center;margin:0 0 20px}
+.rv-cap{position:relative}
+/* telemóvel baixo: o 58 grande tapava o título */
+@media (max-width:640px) and (max-height:700px){.num58{display:none}}
+/* botões do hero cabem numa linha a 360 px */
+@media (max-width:380px){.hero .btn{padding-inline:14px;letter-spacing:.06em}}
+/* menu arrastável: sinal de que há mais à direita */
+@media (max-width:900px){.links{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}}
+.press-note{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:#8d9099;margin:-16px 0 20px}
+.press-note:empty{display:none}
 </style>
 </head>
 <body>
@@ -359,7 +377,7 @@ footer .soc a:hover{color:var(--red-hi)}
 <div class="mzbar"><div class="wrap">
   <a href="https://motozeni.com/es/?utm_source=martimjesus58&amp;utm_medium=referral&amp;utm_campaign=piloto&amp;utm_content=faixa" target="_blank" rel="noopener"><span>Con el apoyo de</span> <b>MotoZeni.com</b></a>
   <nav class="lang" aria-label="Idioma">
-    <a href="/" hreflang="pt" lang="pt-PT">PT</a>
+    <a href="/" hreflang="pt-PT" lang="pt-PT">PT</a>
     <a href="/en/" hreflang="en" lang="en">EN</a>
     <a href="/es/" hreflang="es" lang="es" aria-current="page">ES</a>
   </nav>
@@ -396,13 +414,13 @@ footer .soc a:hover{color:var(--red-hi)}
 <main id="conteudo">
 
 <div class="titles"><div class="row">
-  <span>Campeón de Portugal Stock 600 · 2025</span><span>Campeón de Portugal Supersport 600 · 2026</span><span>Wildcard WorldSSP · Portimão 2026</span><span>FIM JuniorGP · 2025–26</span><span>ESBK · 2025–26</span>
+  <span>Campeón de Portugal de Stock 600 · 2025</span><span>Campeón de Portugal de Supersport 600 · 2026</span><span>Wildcard WorldSSP · Portimão 2026</span><span>FIM JuniorGP · 2025–26</span><span>ESBK · 2025–26</span>
 </div></div>
 
 <section class="race" id="corrida"><div class="wrap">
   <h2 class="sr-only">Temporada 2026</h2>
   <div class="nextbox">
-    <figure><img src="/img/campeao-retrato.jpg" srcset="/img/campeao-retrato-640.webp 640w, /img/campeao-retrato-1024.webp 1024w, /img/campeao-retrato-1600.webp 1600w" alt="Martim Jesus con la camiseta de Campeón Nacional SSP 600 2026 y el casco CAMPEÃO, junto a la moto dorada con el número 1" sizes="(min-width:901px) 460px, 100vw" loading="lazy" decoding="async"></figure>
+    <figure><img src="/img/campeao-retrato.jpg" srcset="/img/campeao-retrato-640.webp 640w, /img/campeao-retrato-1024.webp 1024w, /img/campeao-retrato-1600.webp 1600w" alt="Martim Jesus con la camiseta de campeón nacional de SSP 600 2026 y el casco CAMPEÃO, junto a la moto dorada con el número 1" sizes="(min-width:901px) 460px, calc(100vw - 40px)" loading="lazy" decoding="async"></figure>
     <span class="k">Última ronda · 2026</span>
     <h3>Estoril IV</h3>
     <p class="when">Campeonato de Portugal de Velocidad · 2–4 de octubre de 2026 · título ya asegurado</p>
@@ -413,24 +431,24 @@ footer .soc a:hover{color:var(--red-hi)}
     <div class="stat"><b>15</b><span>victorias</span></div>
     <div class="stat"><b>34+</b><span>podios</span></div>
     <div class="stat"><b>3</b><span>veces subcampeón</span></div>
-    <p class="stats-note">Resultados en Portugal, 2017–2026. No incluye carreras internacionales. <a href='#resultados'>Temporada a temporada <span aria-hidden='true'>↓</span></a></p>
+    <p class="stats-note">Resultados en el Campeonato de Portugal, 2017–2026. No incluye las carreras internacionales. <a href='#resultados'>Temporada a temporada <span aria-hidden='true'>↓</span></a></p>
   </div>
 </div></section>
 
 <section class="story" id="historia"><div class="wrap"><div class="pinbox">
   <div class="head has-portrait">
-    <figure class="portrait"><img src="/img/retrato.jpg" srcset="/img/retrato-640.webp 640w, /img/retrato-990.webp 990w" alt="Martim Jesus sonriendo, con el mono de competición y el casco en la mano, junto a la pista" sizes="320px" loading="lazy" decoding="async"></figure>
+    <figure class="portrait"><img src="/img/retrato.jpg" srcset="/img/retrato-640.webp 640w, /img/retrato-990.webp 990w" alt="Martim Jesus sonriendo, con el mono de competición y el casco en la mano, junto a la pista" sizes="(max-width:900px) 280px, 320px" loading="lazy" decoding="async"></figure>
     <div class="head-txt">
     <h2>De una 90 cc al Mundial</h2>
     <p>Empezó a los 9 años, con una 90 cc, en la escuela RL 58 Performance, en Santo André. Nueve años después es bicampeón de Portugal, corre en España y ya ha debutado en el Mundial.</p>
     </div>
   </div>
   <div class="eras">
-    <div class="era"><span class="y">2017–18</span><b>Mini Velocidade</b><p>Ganó su primera carrera (según la familia) y se rompió los dos brazos ese mismo año. Volvió en 2018 y fue subcampeón, con 3 podios.</p></div>
+    <div class="era"><span class="y">2017–18</span><b>Minivelocidad</b><p>Ganó en su debut (según la familia) y se rompió los dos brazos ese mismo año. Volvió en 2018 y fue subcampeón, con 3 podios.</p></div>
     <div class="era"><span class="y">2019–20</span><b>Moto5</b><p>5.º en 2019 y 8.º en 2020, con una MIR 250.</p></div>
     <div class="era"><span class="y">2021–24</span><b>Supersport 300</b><p>Kawasaki Ninja 400. Subcampeón de Portugal en 2023 y 2024; en 2024, con 3 victorias y 10 podios.</p></div>
     <div class="era"><span class="y">2025</span><b>Stock 600</b><p>Campeón de Portugal en su debut, con la Honda. Se rompió la clavícula en Estoril y, un mes después, ganó en Portimão.</p></div>
-    <div class="era"><span class="y">2026</span><b>Supersport 600</b><p>Bicampeón con una ronda de antelación: 5 victorias y 9 podios. Wildcard en el WorldSSP en Portimão.</p></div>
+    <div class="era"><span class="y">2026</span><b>Supersport 600</b><p>Bicampeón con una ronda de antelación: 5 victorias y 9 podios. Wildcard en el WorldSSP de Portimão.</p></div>
     <div class="era now"><span class="y">2027 →</span><b>Portugal + España</b><p>Quiere defender el título y correr más en España (ESBK). El sueño: «llegar a uno de los mundiales».</p></div>
   </div>
   </div></div></section>
@@ -454,15 +472,15 @@ footer .soc a:hover{color:var(--red-hi)}
         <tr><td>2021</td><td>Supersport 300</td><td>4.º</td><td class="n">0</td><td class="n">0</td></tr>
         <tr><td>2020</td><td>Moto5</td><td>8.º</td><td class="n">0</td><td class="n">0</td></tr>
         <tr><td>2019</td><td>Moto5</td><td>5.º</td><td class="n">0</td><td class="n">0</td></tr>
-        <tr><td>2018</td><td>Mini Velocidade</td><td>Subcampeón</td><td class="n">2</td><td class="n">3</td></tr>
-        <tr><td>2017</td><td>Mini Velocidade</td><td>14.º*</td><td class="n">1**</td><td class="n">—</td></tr>
+        <tr><td>2018</td><td>Minivelocidad</td><td>Subcampeón</td><td class="n">2</td><td class="n">3</td></tr>
+        <tr><td>2017</td><td>Minivelocidad</td><td>14.º*</td><td class="n">1**</td><td class="n">—</td></tr>
       </tbody>
       <tfoot><tr><td></td><td></td><td>Total</td><td class="n">15</td><td class="n">34+</td></tr></tfoot>
     </table>
     </div>
     <div class="rnote">
       <p>Campeonato de Portugal. No incluye las carreras internacionales (ESBK, FIM JuniorGP, WorldSSP).</p>
-      <p>* Clasificación según contó Martim al periódico O Leme (2021). ** Victoria de debut, según el historial de la familia.</p>
+      <p>* Clasificación según contó Martim al periódico O Leme (2021). ** Victoria de debut, según los registros de la familia.</p>
       <p>El 58 es el número de Martim. En 2026, en el Campeonato de Portugal, corrió con el 48.</p>
     </div>
   </div>
@@ -470,8 +488,8 @@ footer .soc a:hover{color:var(--red-hi)}
   <div>
     <h3 class="sub-h">Cinco motos</h3>
     <div class="bikes">
-      <div class="bike"><span class="y">2017 – mediados de 2018</span><b>Malcor 90</b><span>90 cc, llanta de 10 pulgadas. Mini Velocidade.</span></div>
-      <div class="bike"><span class="y">desde mediados de 2018</span><b>IMR 90</b><span>90 cc, llanta de 12 pulgadas. Mini Velocidade.</span></div>
+      <div class="bike"><span class="y">2017 – mediados de 2018</span><b>Malcor 90</b><span>90 cc, ruedas de 10 pulgadas. Minivelocidad.</span></div>
+      <div class="bike"><span class="y">desde mediados de 2018</span><b>IMR 90</b><span>90 cc, ruedas de 12 pulgadas. Minivelocidad.</span></div>
       <div class="bike"><span class="y">2019–2020</span><b>MIR 250</b><span>250 cc. Moto5, Campeonato de Portugal.</span></div>
       <div class="bike"><span class="y">2021–2024</span><b>Kawasaki Ninja 400</b><span>Supersport 300.</span></div>
       <div class="bike now"><span class="y">2025–2026</span><b>Honda CBR600RR</b><span>Stock 600 y Supersport 600. Suspensiones Öhlins, electrónica de competición, escape Arrow.</span></div>
@@ -479,7 +497,7 @@ footer .soc a:hover{color:var(--red-hi)}
   </div>
 
   <div>
-    <h3 class="sub-h">Equipos hasta hoy</h3>
+    <h3 class="sub-h">Equipos hasta la fecha</h3>
     <div class="teams">
       <div class="team"><span>2017–2020</span><b>RL 58 Performance</b><span>Escuela de pilotaje en el kartódromo de Santo André, donde empezó todo.</span></div>
       <div class="team"><span>2021–2022</span><b>IR Stand</b><span>Supersport 300.</span></div>
@@ -492,7 +510,7 @@ footer .soc a:hover{color:var(--red-hi)}
   <div class="rv-stage">
     <div class="rv-b"><img src="/img/hero-nexx.jpg" srcset="/img/hero-nexx-640.webp 640w, /img/hero-nexx-1024.webp 1024w, /img/hero-nexx-1600.webp 1600w" alt="" sizes="50vw" loading="lazy" decoding="async"></div>
     <div class="rv-veil" aria-hidden="true"></div>
-    <div class="rv-soon" aria-hidden="true">Pronto</div>
+    <div class="rv-soon" aria-hidden="true">Próximamente</div>
     <div class="rv-cap three"><div class="wrap rv-final">
       <span class="k" style="color:var(--red-hi)">NEXX × Martim Jesus</span>
       <h2>El casco nuevo. <em>Todavía en secreto.</em></h2>
@@ -506,7 +524,7 @@ footer .soc a:hover{color:var(--red-hi)}
 </section>
 
 <section class="project" id="projecto">
-  <figure><img src="/img/podio-titulo.jpg" srcset="/img/podio-titulo-640.webp 640w, /img/podio-titulo-1023.webp 1023w" alt="Martim Jesus en lo más alto del podio, con los brazos en alto, Estoril, septiembre de 2026" sizes="(min-width:901px) 50vw, 100vw" loading="lazy" decoding="async"></figure>
+  <figure><img src="/img/podio-titulo.jpg" srcset="/img/podio-titulo-640.webp 640w, /img/podio-titulo-1023.webp 1023w" alt="Martim Jesus en lo más alto del podio, con los brazos levantados, Estoril, septiembre de 2026" sizes="(min-width:901px) 50vw, 100vw" loading="lazy" decoding="async"></figure>
   <div class="side">
     <span class="k">Proyecto 2027</span>
     <h2>2027: Portugal + España</h2>
@@ -526,11 +544,11 @@ footer .soc a:hover{color:var(--red-hi)}
   <h2>Apoyos</h2>
   <a class="main-partner" href="https://motozeni.com/es/?utm_source=martimjesus58&amp;utm_medium=referral&amp;utm_campaign=piloto&amp;utm_content=parceiro" target="_blank" rel="noopener">
     <span class="wm">Moto<i>Zeni</i>.com</span>
-    <p>El equipamiento que usa Martim, a la venta: cascos NEXX, latiguillos de freno HEL Performance, escapes Arrow y mucho más, con envío a toda la UE.</p>
+    <p>El material que usa Martim, a la venta: cascos NEXX, latiguillos de freno HEL Performance, escapes Arrow y mucho más, con envío a toda la UE.</p>
     <span class="btn red" style="pointer-events:none"><span>Tienda</span> <span class="arr" aria-hidden="true">↗</span></span>
   </a>
   <div class="tier tec">
-    <span class="k">Apoyos técnicos</span>
+    <span class="k">Patrocinadores técnicos</span>
     <div class="logos">
       <a class="logo" href="https://www.nexx-helmets.com/" target="_blank" rel="noopener">NEXX<small>cascos</small></a>
       <a class="logo" href="https://www.helportugal.com/" target="_blank" rel="noopener">HEL Performance<small>latiguillos de freno</small></a>
@@ -551,7 +569,7 @@ footer .soc a:hover{color:var(--red-hi)}
       <a class="logo" href="https://www.facebook.com/publicontroll/" target="_blank" rel="noopener">Publicontrol<small>publicidad exterior · Facebook</small></a>
       <a class="logo" href="https://tgftransportes.com/" target="_blank" rel="noopener">TGF Transportes<small>transportes · Santo André</small></a>
       <a class="logo" href="https://www.wavemarin.com/" target="_blank" rel="noopener">Wave Marine<small>servicios marítimos · Sines</small></a>
-      <a class="logo" href="https://xmamotors.com/en" target="_blank" rel="noopener">Xmitha<small>agencia de pilotos</small></a>
+      <a class="logo" href="https://xmamotors.com/en" target="_blank" rel="noopener">Xmitha<small>representación de pilotos</small></a>
     </div>
   </div>
   <div class="tier">
@@ -559,7 +577,7 @@ footer .soc a:hover{color:var(--red-hi)}
     <div class="logos sm">
       <a class="logo" href="https://www.facebook.com/alphafitness.pt/" target="_blank" rel="noopener">Alpha Fitness<small>gimnasio · Santo André · Facebook</small></a>
       <a class="logo" href="https://www.facebook.com/FarmaciaFontes/" target="_blank" rel="noopener">Farmácia Fontes<small>farmacia · Santo André · Facebook</small></a>
-      <a class="logo" href="https://www.fmp.pt/" target="_blank" rel="noopener">FMP<small>federación de motociclismo</small></a>
+      <a class="logo" href="https://www.fmp.pt/" target="_blank" rel="noopener">FMP<small>federación portuguesa de motociclismo</small></a>
       <a class="logo" href="https://fullgrip.ai/" target="_blank" rel="noopener">FullGrip.ai<small>web y digital</small></a>
       <a class="logo" href="https://www.facebook.com/HPMotoresSport/" target="_blank" rel="noopener">HPTv<small>contenidos de motor · Facebook</small></a>
       <a class="logo" href="https://www.instagram.com/iconic.fitnesstudio/" target="_blank" rel="noopener">Iconic Fitness Studio<small>fitness · Instagram</small></a>
@@ -567,29 +585,30 @@ footer .soc a:hover{color:var(--red-hi)}
       <a class="logo" href="https://www.npmotos.pt/" target="_blank" rel="noopener">NPmotos<small>taller de motos</small></a>
       <div class="logo">On Track<small>Santo André</small></div>
       <a class="logo" href="https://www.facebook.com/Quiosque-DIgital-1599627226721357/" target="_blank" rel="noopener">Quiosque Digital<small>Santo André · Facebook</small></a>
-      <a class="logo" href="https://www.st-santocede.pt/pt" target="_blank" rel="noopener">Santocede<small>trabajo temporal · Santo André</small></a>
+      <a class="logo" href="https://www.st-santocede.pt/pt" target="_blank" rel="noopener">Santocede<small>empresa de trabajo temporal · Santo André</small></a>
     </div>
   </div>
 </div></section>
 
 <section class="press" id="imprensa"><div class="wrap">
   <h2>En la prensa</h2>
+  <p class="press-note">Artículos en portugués.</p>
   <div class="cards">
-    <a class="card" href="https://motozeni.com/pt/noticias/martim-jesus-fecha-a-epoca-com-o-numero-1" target="_blank" rel="noopener"><span class="k">MotoZeni <span aria-hidden="true">↗</span></span><b lang="pt-PT">O Martim Jesus fechou a época com o número 1 na mota</b><span>5 oct 2026</span></a>
-    <a class="card" href="https://motozeni.com/pt/noticias/o-martim-jesus-ja-corre-com-a-motozeni" target="_blank" rel="noopener"><span class="k">MotoZeni <span aria-hidden="true">↗</span></span><b lang="pt-PT">O Martim Jesus já corre com a MotoZeni</b><span>3 oct 2026</span></a>
-    <a class="card" href="https://motojornal.pt/cnv-moto-martim-jesus-garante-antecipadamente-o-titulo-supersport-2026/" target="_blank" rel="noopener"><span class="k">Motojornal <span aria-hidden="true">↗</span></span><b lang="pt-PT">Martim Jesus garante antecipadamente o título Supersport 2026</b><span>14 sep 2026</span></a>
-    <a class="card" href="https://motojornal.pt/cnv-moto-2026-saio-do-estoril-com-duas-vitorias-e-na-lideranca-o-que-me-da-ainda-mais-motivacao-diz-martim-jesus/" target="_blank" rel="noopener"><span class="k">Motojornal <span aria-hidden="true">↗</span></span><b lang="pt-PT">«Saio do Estoril com duas vitórias e na liderança»</b><span>21 may 2026</span></a>
-    <a class="card" href="https://osetubalense.com/local/santiago-do-cacem/martim-jesus-figura-do-ano-do-concelho-de-santiago-do-cacem" target="_blank" rel="noopener"><span class="k">O Setubalense <span aria-hidden="true">↗</span></span><b lang="pt-PT">Martim Jesus, Figura do Ano do concelho de Santiago do Cacém</b><span>9 abr 2026</span></a>
-    <a class="card" href="https://www.record.pt/modalidades/motores/motociclismo/detalhe/martim-jesus-quer-aprender-com-os-melhores-em-portimao-o-meu-maior-sonho-e-chegar-a-um-dos-mundiais" target="_blank" rel="noopener"><span class="k">Record <span aria-hidden="true">↗</span></span><b lang="pt-PT">Martim Jesus quer aprender com os melhores em Portimão</b><span>29 mar 2026</span></a>
+    <a class="card" href="https://motozeni.com/pt/noticias/martim-jesus-fecha-a-epoca-com-o-numero-1" target="_blank" rel="noopener"><span class="k">MotoZeni <span aria-hidden="true">↗</span></span><b lang="pt-PT">O Martim Jesus fechou a época com o número 1 na mota</b><span>5 oct. 2026</span></a>
+    <a class="card" href="https://motozeni.com/pt/noticias/o-martim-jesus-ja-corre-com-a-motozeni" target="_blank" rel="noopener"><span class="k">MotoZeni <span aria-hidden="true">↗</span></span><b lang="pt-PT">O Martim Jesus já corre com a MotoZeni</b><span>3 oct. 2026</span></a>
+    <a class="card" href="https://motojornal.pt/cnv-moto-martim-jesus-garante-antecipadamente-o-titulo-supersport-2026/" target="_blank" rel="noopener"><span class="k">Motojornal <span aria-hidden="true">↗</span></span><b lang="pt-PT">Martim Jesus garante antecipadamente o título Supersport 2026</b><span>14 sept. 2026</span></a>
+    <a class="card" href="https://motojornal.pt/cnv-moto-2026-saio-do-estoril-com-duas-vitorias-e-na-lideranca-o-que-me-da-ainda-mais-motivacao-diz-martim-jesus/" target="_blank" rel="noopener"><span class="k">Motojornal <span aria-hidden="true">↗</span></span><b lang="pt-PT">«Saio do Estoril com duas vitórias e na liderança»</b><span>21 mayo 2026</span></a>
+    <a class="card" href="https://osetubalense.com/local/santiago-do-cacem/martim-jesus-figura-do-ano-do-concelho-de-santiago-do-cacem" target="_blank" rel="noopener"><span class="k">O Setubalense <span aria-hidden="true">↗</span></span><b lang="pt-PT">Martim Jesus, Figura do Ano do concelho de Santiago do Cacém</b><span>9 abr. 2026</span></a>
+    <a class="card" href="https://www.record.pt/modalidades/motores/motociclismo/detalhe/martim-jesus-quer-aprender-com-os-melhores-em-portimao-o-meu-maior-sonho-e-chegar-a-um-dos-mundiais" target="_blank" rel="noopener"><span class="k">Record <span aria-hidden="true">↗</span></span><b lang="pt-PT">Martim Jesus quer aprender com os melhores em Portimão</b><span>29 mar. 2026</span></a>
   </div>
 </div></section>
 
 <section class="gallery" id="galeria" aria-label="Galería">
   <figure><img src="/img/com-o-1.jpg" srcset="/img/com-o-1-640.webp 640w, /img/com-o-1-1024.webp 1024w, /img/com-o-1-1500.webp 1500w" alt="La Honda dorada con el número 1 inclinada en una curva en Estoril" sizes="(min-width:701px) 33vw, 100vw" decoding="async" loading="lazy"><figcaption>Con el 1 · Estoril, oct. 2026</figcaption></figure>
-  <figure><img src="/img/grelha-equipa.jpg" srcset="/img/grelha-equipa-640.webp 640w, /img/grelha-equipa-1024.webp 1024w, /img/grelha-equipa-1500.webp 1500w" alt="Martim en la moto en la parrilla de salida, con el equipo alrededor" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption>En la parrilla</figcaption></figure>
+  <figure><img src="/img/grelha-equipa.jpg" srcset="/img/grelha-equipa-640.webp 640w, /img/grelha-equipa-1024.webp 1024w, /img/grelha-equipa-1500.webp 1500w" alt="Martim subido a la moto en la parrilla de salida, rodeado de su equipo" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption>En la parrilla</figcaption></figure>
   <figure><img src="/img/champanhe.jpg" srcset="/img/champanhe-640.webp 640w, /img/champanhe-1024.webp 1024w, /img/champanhe-1500.webp 1500w" alt="Martim celebrando en el podio con champán" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:50% 30%" loading="lazy"><figcaption>Campeón · Estoril, sept. 2026</figcaption></figure>
   <figure><img src="/img/campeao-capacete.jpg" srcset="/img/campeao-capacete-640.webp 640w, /img/campeao-capacete-1024.webp 1024w, /img/campeao-capacete-1500.webp 1500w" alt="El casco CAMPEÃO en el asfalto, delante de la moto dorada" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption>El casco de campeón</figcaption></figure>
-  <figure><img src="/img/hero-nexx.jpg" srcset="/img/hero-nexx-640.webp 640w, /img/hero-nexx-1024.webp 1024w, /img/hero-nexx-1600.webp 1600w" alt="Martim inclinado en una curva en la Honda con el número 48" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:40% 30%" loading="lazy"><figcaption>Con el 48, en Portugal</figcaption></figure>
+  <figure><img src="/img/hero-nexx.jpg" srcset="/img/hero-nexx-640.webp 640w, /img/hero-nexx-1024.webp 1024w, /img/hero-nexx-1600.webp 1600w" alt="Martim inclinado en una curva en la Honda con el número 48" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:40% 30%" loading="lazy"><figcaption>Con el 48, en el Campeonato de Portugal</figcaption></figure>
   <figure><img src="/img/ritual-box.jpg" srcset="/img/ritual-box-640.webp 640w, /img/ritual-box-1024.webp 1024w, /img/ritual-box-1500.webp 1500w" alt="Martim agachado delante de la moto, al salir del box" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:60% 50%" loading="lazy"><figcaption>Antes de salir</figcaption></figure>
   <figure><img src="/img/punho-no-ar.jpg" srcset="/img/punho-no-ar-640.webp 640w, /img/punho-no-ar-1024.webp 1024w, /img/punho-no-ar-1500.webp 1500w" alt="Martim con el puño en alto y la visera abierta, en la moto con el número 1" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:50% 35%" loading="lazy"><figcaption>Última carrera de la temporada</figcaption></figure>
   <figure><img src="/img/nexx-preto.jpg" srcset="/img/nexx-preto-640.webp 640w, /img/nexx-preto-1024.webp 1024w, /img/nexx-preto-1500.webp 1500w" alt="Martim inclinado en una curva con un casco NEXX negro y el 58 en la espalda del mono" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption>En pista</figcaption></figure>

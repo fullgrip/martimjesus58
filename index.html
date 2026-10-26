@@ -24,6 +24,8 @@
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:alt" content="Martim Jesus com a t-shirt de Campeão Nacional SSP 600 2026, ao lado da Honda dourada com o número 1">
 <meta property="og:locale" content="pt_PT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image:alt" content="Martim Jesus com a t-shirt de Campeão Nacional SSP 600 2026, ao lado da Honda dourada com o número 1">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://martimjesus58.com/#website", "url": "https://martimjesus58.com/", "name": "Martim Jesus #58", "alternateName": ["Martim Jesus", "MJ58"], "inLanguage": ["pt-PT", "en", "es"], "about": {"@id": "https://martimjesus58.com/#person"}}, {"@type": "Person", "@id": "https://martimjesus58.com/#person", "name": "Martim Jesus", "alternateName": "Martim Jesus #58", "url": "https://martimjesus58.com/", "image": "https://martimjesus58.com/og.jpg", "description": "Martim Jesus, piloto de Santo André, bicampeão nacional 600 em 2025 e 2026 na Honda CBR600RR. Resultados, percurso e apoios.", "jobTitle": "Piloto de motociclismo de velocidade", "nationality": {"@type": "Country", "name": "Portugal"}, "homeLocation": {"@type": "Place", "name": "Santo André, Santiago do Cacém, Portugal"}, "award": ["Campeão Nacional Stock 600 · 2025", "Campeão Nacional Supersport 600 · 2026"], "email": "mailto:contacto@martimjesus58.com", "sameAs": ["https://www.instagram.com/martimjesus58/", "https://motozeni.com/pt/pilotos/martim-jesus"]}]}</script>
@@ -351,6 +353,22 @@ footer .soc a:hover{color:var(--red-hi)}
 /* rodapé */
 .foot-r{display:grid;gap:10px}
 @media (min-width:641px){.foot-r{justify-items:end}}
+
+/* ===== QA da versão espanhola (26/10/2026) ===== */
+/* tabela a 360 px: o cabeçalho «Clasificación» empurrava a coluna dos pódios para fora */
+@media (max-width:520px){.rtable th{letter-spacing:.04em}}
+/* capacete: «Em breve» e o texto empilhados, sem se sobreporem em ecrãs baixos */
+.rv-stage{height:auto;min-height:clamp(480px,70svh,760px);display:flex;flex-direction:column;justify-content:flex-end;padding-top:48px}
+.rv-soon{position:relative;top:auto;left:auto;transform:none;align-self:center;margin:0 0 20px}
+.rv-cap{position:relative}
+/* telemóvel baixo: o 58 grande tapava o título */
+@media (max-width:640px) and (max-height:700px){.num58{display:none}}
+/* botões do hero cabem numa linha a 360 px */
+@media (max-width:380px){.hero .btn{padding-inline:14px;letter-spacing:.06em}}
+/* menu arrastável: sinal de que há mais à direita */
+@media (max-width:900px){.links{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}}
+.press-note{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:#8d9099;margin:-16px 0 20px}
+.press-note:empty{display:none}
 </style>
 </head>
 <body>
@@ -359,7 +377,7 @@ footer .soc a:hover{color:var(--red-hi)}
 <div class="mzbar"><div class="wrap">
   <a href="https://motozeni.com/?utm_source=martimjesus58&amp;utm_medium=referral&amp;utm_campaign=piloto&amp;utm_content=faixa" target="_blank" rel="noopener"><span>Com o apoio de</span> <b>MotoZeni.com</b></a>
   <nav class="lang" aria-label="Língua">
-    <a href="/" hreflang="pt" lang="pt-PT" aria-current="page">PT</a>
+    <a href="/" hreflang="pt-PT" lang="pt-PT" aria-current="page">PT</a>
     <a href="/en/" hreflang="en" lang="en">EN</a>
     <a href="/es/" hreflang="es" lang="es">ES</a>
   </nav>
@@ -402,7 +420,7 @@ footer .soc a:hover{color:var(--red-hi)}
 <section class="race" id="corrida"><div class="wrap">
   <h2 class="sr-only">Época 2026</h2>
   <div class="nextbox">
-    <figure><img src="/img/campeao-retrato.jpg" srcset="/img/campeao-retrato-640.webp 640w, /img/campeao-retrato-1024.webp 1024w, /img/campeao-retrato-1600.webp 1600w" alt="Martim Jesus de t-shirt de Campeão Nacional SSP 600 2026, com o capacete CAMPEÃO, ao lado da mota dourada com o número 1" sizes="(min-width:901px) 460px, 100vw" loading="lazy" decoding="async"></figure>
+    <figure><img src="/img/campeao-retrato.jpg" srcset="/img/campeao-retrato-640.webp 640w, /img/campeao-retrato-1024.webp 1024w, /img/campeao-retrato-1600.webp 1600w" alt="Martim Jesus de t-shirt de Campeão Nacional SSP 600 2026, com o capacete CAMPEÃO, ao lado da mota dourada com o número 1" sizes="(min-width:901px) 460px, calc(100vw - 40px)" loading="lazy" decoding="async"></figure>
     <span class="k">Última ronda · 2026</span>
     <h3>Estoril IV</h3>
     <p class="when">Campeonato Nacional de Velocidade · 2 a 4 de Outubro de 2026 · título já garantido</p>
@@ -419,7 +437,7 @@ footer .soc a:hover{color:var(--red-hi)}
 
 <section class="story" id="historia"><div class="wrap"><div class="pinbox">
   <div class="head has-portrait">
-    <figure class="portrait"><img src="/img/retrato.jpg" srcset="/img/retrato-640.webp 640w, /img/retrato-990.webp 990w" alt="Martim Jesus a sorrir, de fato de competição e capacete na mão, junto à pista" sizes="320px" loading="lazy" decoding="async"></figure>
+    <figure class="portrait"><img src="/img/retrato.jpg" srcset="/img/retrato-640.webp 640w, /img/retrato-990.webp 990w" alt="Martim Jesus a sorrir, de fato de competição e capacete na mão, junto à pista" sizes="(max-width:900px) 280px, 320px" loading="lazy" decoding="async"></figure>
     <div class="head-txt">
     <h2>Dos 90 cc ao mundial</h2>
     <p>Começou aos 9 anos, numa 90 cc, na escola RL 58 Performance, em Santo André. Nove anos depois é bicampeão nacional, corre em Espanha e já se estreou no mundial.</p>
@@ -574,6 +592,7 @@ footer .soc a:hover{color:var(--red-hi)}
 
 <section class="press" id="imprensa"><div class="wrap">
   <h2>Na imprensa</h2>
+  <p class="press-note"></p>
   <div class="cards">
     <a class="card" href="https://motozeni.com/pt/noticias/martim-jesus-fecha-a-epoca-com-o-numero-1" target="_blank" rel="noopener"><span class="k">MotoZeni <span aria-hidden="true">↗</span></span><b lang="pt-PT">O Martim Jesus fechou a época com o número 1 na mota</b><span>5 Out 2026</span></a>
     <a class="card" href="https://motozeni.com/pt/noticias/o-martim-jesus-ja-corre-com-a-motozeni" target="_blank" rel="noopener"><span class="k">MotoZeni <span aria-hidden="true">↗</span></span><b lang="pt-PT">O Martim Jesus já corre com a MotoZeni</b><span>3 Out 2026</span></a>
