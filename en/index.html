@@ -369,6 +369,25 @@ footer .soc a:hover{color:var(--red-hi)}
 @media (max-width:900px){.links{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}}
 .press-note{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:#8d9099;margin:-16px 0 20px}
 .press-note:empty{display:none}
+/* proposta v3: fotos a meio da página no telemóvel */
+.band{margin:0;position:relative;overflow:hidden;background:#000;aspect-ratio:21/9;max-height:78vh}
+.band img{width:100%;height:100%;object-fit:cover;display:block}
+.band figcaption{position:absolute;left:20px;bottom:14px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(0,0,0,.6);color:#fff;padding:4px 8px}
+.band.in{margin-inline:calc(50% - 50vw)}
+.band.tall{display:none}
+.partners .band.in{margin-block:8px 32px}
+@media (max-width:700px){
+  .band{aspect-ratio:4/5;max-height:none}
+  .band.tall{display:block}
+  .nextbox figure{aspect-ratio:1/1}
+  .bikes,.teams{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1px;scrollbar-width:none;margin-right:-20px}
+  .teams{gap:16px}
+  .bikes::-webkit-scrollbar,.teams::-webkit-scrollbar{display:none}
+  .bike,.team{flex:0 0 74%;scroll-snap-align:start}
+  .results .wrap{gap:40px}
+}
+/* capacete: volta a ocupar quase um ecrã, como até 21/10; «Em breve» em cima, texto em baixo, sem sobreposição */
+.rv-stage{min-height:clamp(540px,88svh,900px);justify-content:space-between}
 </style>
 </head>
 <body>
@@ -453,6 +472,7 @@ footer .soc a:hover{color:var(--red-hi)}
   </div>
   </div></div></section>
 
+<figure class="band"><img src="/img/cavalinho-estoril.jpg" srcset="/img/cavalinho-estoril-640.webp 640w, /img/cavalinho-estoril-1024.webp 1024w, /img/cavalinho-estoril-1600.webp 1600w" alt="Martim lifting the front wheel on the Honda with number 48, at Estoril" sizes="100vw" loading="lazy" decoding="async" style="object-position:50% 45%"><figcaption>Estoril · Sept. 2026</figcaption></figure>
 <section class="results" id="resultados"><div class="wrap">
   <div>
     <div class="hd">
@@ -485,6 +505,7 @@ footer .soc a:hover{color:var(--red-hi)}
     </div>
   </div>
 
+  <figure class="band in"><img src="/img/costas-58.jpg" srcset="/img/costas-58-640.webp 640w, /img/costas-58-1024.webp 1024w, /img/costas-58-1280.webp 1280w" alt="Martim from behind, sitting on the bike in the pit lane, with 58 on his suit" sizes="100vw" loading="lazy" decoding="async" style="object-position:55% 40%"><figcaption>The 58, on the back of his suit</figcaption></figure>
   <div>
     <h3 class="sub-h">Five bikes</h3>
     <div class="bikes">
@@ -540,6 +561,7 @@ footer .soc a:hover{color:var(--red-hi)}
   </div>
 </section>
 
+<figure class="band"><img src="/img/frente-brico.jpg" srcset="/img/frente-brico-640.webp 640w, /img/frente-brico-1024.webp 1024w, /img/frente-brico-1600.webp 1600w" alt="Martim head-on on the Honda with number 48 and the Bricomarché sticker, at Estoril" sizes="100vw" loading="lazy" decoding="async" style="object-position:50% 50%"><figcaption>Sponsors ride on the bike</figcaption></figure>
 <section class="partners" id="parceiros"><div class="wrap">
   <h2>Supporters</h2>
   <a class="main-partner" href="https://motozeni.com/en/?utm_source=martimjesus58&amp;utm_medium=referral&amp;utm_campaign=piloto&amp;utm_content=parceiro" target="_blank" rel="noopener">
@@ -572,6 +594,7 @@ footer .soc a:hover{color:var(--red-hi)}
       <a class="logo" href="https://xmamotors.com/en" target="_blank" rel="noopener">Xmitha<small>rider management</small></a>
     </div>
   </div>
+  <figure class="band in tall"><img src="/img/saida-boxes.jpg" srcset="/img/saida-boxes-640.webp 640w, /img/saida-boxes-1024.webp 1024w, /img/saida-boxes-1066.webp 1066w" alt="Martim leaving the pits on the Honda with number 48, under a blue sky" sizes="100vw" loading="lazy" decoding="async" style="object-position:50% 68%"><figcaption>Leaving the pits</figcaption></figure>
   <div class="tier">
     <span class="k">Partners</span>
     <div class="logos sm">
@@ -590,6 +613,18 @@ footer .soc a:hover{color:var(--red-hi)}
   </div>
 </div></section>
 
+<section class="gallery" id="galeria" aria-label="Gallery">
+  <figure><img src="/img/com-o-1.jpg" srcset="/img/com-o-1-640.webp 640w, /img/com-o-1-1024.webp 1024w, /img/com-o-1-1500.webp 1500w" alt="The gold Honda with number 1 leaning into a corner at Estoril" sizes="(min-width:701px) 33vw, 100vw" decoding="async" loading="lazy"><figcaption>With the 1 · Estoril, Oct 2026</figcaption></figure>
+  <figure><img src="/img/grelha-equipa.jpg" srcset="/img/grelha-equipa-640.webp 640w, /img/grelha-equipa-1024.webp 1024w, /img/grelha-equipa-1500.webp 1500w" alt="Martim on the bike on the starting grid, with the team around him" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption>On the grid</figcaption></figure>
+  <figure><img src="/img/champanhe.jpg" srcset="/img/champanhe-640.webp 640w, /img/champanhe-1024.webp 1024w, /img/champanhe-1500.webp 1500w" alt="Martim celebrating on the podium with champagne" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:50% 30%" loading="lazy"><figcaption>Champion · Estoril, Sept 2026</figcaption></figure>
+  <figure><img src="/img/campeao-capacete.jpg" srcset="/img/campeao-capacete-640.webp 640w, /img/campeao-capacete-1024.webp 1024w, /img/campeao-capacete-1500.webp 1500w" alt="The CAMPEÃO helmet on the asphalt in front of the gold bike" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption>The champion's helmet</figcaption></figure>
+  <figure><img src="/img/hero-nexx.jpg" srcset="/img/hero-nexx-640.webp 640w, /img/hero-nexx-1024.webp 1024w, /img/hero-nexx-1600.webp 1600w" alt="Martim leaning into a corner on the Honda with number 48" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:40% 30%" loading="lazy"><figcaption>Racing as 48 in the nationals</figcaption></figure>
+  <figure><img src="/img/ritual-box.jpg" srcset="/img/ritual-box-640.webp 640w, /img/ritual-box-1024.webp 1024w, /img/ritual-box-1500.webp 1500w" alt="Martim bent over in front of the bike, leaving the pit box" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:60% 50%" loading="lazy"><figcaption>Before going out</figcaption></figure>
+  <figure><img src="/img/punho-no-ar.jpg" srcset="/img/punho-no-ar-640.webp 640w, /img/punho-no-ar-1024.webp 1024w, /img/punho-no-ar-1500.webp 1500w" alt="Martim with his fist raised, visor open, on the bike with number 1" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:50% 35%" loading="lazy"><figcaption>Last race of the season</figcaption></figure>
+  <figure><img src="/img/nexx-preto.jpg" srcset="/img/nexx-preto-640.webp 640w, /img/nexx-preto-1024.webp 1024w, /img/nexx-preto-1500.webp 1500w" alt="Martim leaning into a corner in a black NEXX helmet, the 58 on the back of his suit" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption>On track</figcaption></figure>
+  <figure><img src="/img/curva-cima.jpg" srcset="/img/curva-cima-640.webp 640w, /img/curva-cima-1024.webp 1024w, /img/curva-cima-1066.webp 1066w" alt="Martim alone in a corner, seen from above" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:50% 62%" loading="lazy"><figcaption>From above</figcaption></figure>
+</section>
+
 <section class="press" id="imprensa"><div class="wrap">
   <h2>In the press</h2>
   <p class="press-note">Articles in Portuguese.</p>
@@ -602,18 +637,6 @@ footer .soc a:hover{color:var(--red-hi)}
     <a class="card" href="https://www.record.pt/modalidades/motores/motociclismo/detalhe/martim-jesus-quer-aprender-com-os-melhores-em-portimao-o-meu-maior-sonho-e-chegar-a-um-dos-mundiais" target="_blank" rel="noopener"><span class="k">Record <span aria-hidden="true">↗</span></span><b lang="pt-PT">Martim Jesus quer aprender com os melhores em Portimão</b><span>29 Mar 2026</span></a>
   </div>
 </div></section>
-
-<section class="gallery" id="galeria" aria-label="Gallery">
-  <figure><img src="/img/com-o-1.jpg" srcset="/img/com-o-1-640.webp 640w, /img/com-o-1-1024.webp 1024w, /img/com-o-1-1500.webp 1500w" alt="The gold Honda with number 1 leaning into a corner at Estoril" sizes="(min-width:701px) 33vw, 100vw" decoding="async" loading="lazy"><figcaption>With the 1 · Estoril, Oct 2026</figcaption></figure>
-  <figure><img src="/img/grelha-equipa.jpg" srcset="/img/grelha-equipa-640.webp 640w, /img/grelha-equipa-1024.webp 1024w, /img/grelha-equipa-1500.webp 1500w" alt="Martim on the bike on the starting grid, with the team around him" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption>On the grid</figcaption></figure>
-  <figure><img src="/img/champanhe.jpg" srcset="/img/champanhe-640.webp 640w, /img/champanhe-1024.webp 1024w, /img/champanhe-1500.webp 1500w" alt="Martim celebrating on the podium with champagne" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:50% 30%" loading="lazy"><figcaption>Champion · Estoril, Sept 2026</figcaption></figure>
-  <figure><img src="/img/campeao-capacete.jpg" srcset="/img/campeao-capacete-640.webp 640w, /img/campeao-capacete-1024.webp 1024w, /img/campeao-capacete-1500.webp 1500w" alt="The CAMPEÃO helmet on the asphalt in front of the gold bike" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption>The champion's helmet</figcaption></figure>
-  <figure><img src="/img/hero-nexx.jpg" srcset="/img/hero-nexx-640.webp 640w, /img/hero-nexx-1024.webp 1024w, /img/hero-nexx-1600.webp 1600w" alt="Martim leaning into a corner on the Honda with number 48" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:40% 30%" loading="lazy"><figcaption>Racing as 48 in the nationals</figcaption></figure>
-  <figure><img src="/img/ritual-box.jpg" srcset="/img/ritual-box-640.webp 640w, /img/ritual-box-1024.webp 1024w, /img/ritual-box-1500.webp 1500w" alt="Martim bent over in front of the bike, leaving the pit box" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:60% 50%" loading="lazy"><figcaption>Before going out</figcaption></figure>
-  <figure><img src="/img/punho-no-ar.jpg" srcset="/img/punho-no-ar-640.webp 640w, /img/punho-no-ar-1024.webp 1024w, /img/punho-no-ar-1500.webp 1500w" alt="Martim with his fist raised, visor open, on the bike with number 1" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:50% 35%" loading="lazy"><figcaption>Last race of the season</figcaption></figure>
-  <figure><img src="/img/nexx-preto.jpg" srcset="/img/nexx-preto-640.webp 640w, /img/nexx-preto-1024.webp 1024w, /img/nexx-preto-1500.webp 1500w" alt="Martim leaning into a corner in a black NEXX helmet, the 58 on the back of his suit" sizes="(min-width:701px) 33vw, 50vw" decoding="async" loading="lazy"><figcaption>On track</figcaption></figure>
-  <figure><img src="/img/curva-cima.jpg" srcset="/img/curva-cima-640.webp 640w, /img/curva-cima-1024.webp 1024w, /img/curva-cima-1066.webp 1066w" alt="Martim alone in a corner, seen from above" sizes="(min-width:701px) 33vw, 50vw" decoding="async" style="object-position:50% 62%" loading="lazy"><figcaption>From above</figcaption></figure>
-</section>
 
 </main>
 
